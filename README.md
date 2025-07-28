@@ -1,4 +1,4 @@
-# sql_retal_sales_p1
+# sql_retail_sales_p1
 # SQL Retail Sales Analysis 
 CREATE DATABASE sql_project_p1;
 
