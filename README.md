@@ -113,8 +113,8 @@ WHERE category = 'Clothing'
       AND Quantity>3
 	  AND sale_date BETWEEN '2022-11-01' AND '2022-11-30';
 
-## Q3. Write a SQL query to calculate the total sales(total_sale) for each category.
-'''sql
+** Q3. Write a SQL query to calculate the total sales(total_sale) for each category.
+'''
 SELECT category, 
        SUM(total_sale) as Net_sale
 FROM retail_sales
@@ -193,8 +193,8 @@ FROM retail_sales
 GROUP BY 2
 ORDER BY 1;
 
-## Q12. What is the total revenue generated in the Morning, Afternoon, and Evening?(Morning <=12,Afternoon Between 12 & 17,Evening >17)
-'''sql
+**Q12. What is the total revenue generated in the Morning, Afternoon, and Evening?(Morning <=12,Afternoon Between 12 & 17,Evening >17)
+'''
 SELECT 
   CASE 
     WHEN EXTRACT(HOUR FROM sale_time) < 12 THEN 'Morning'
