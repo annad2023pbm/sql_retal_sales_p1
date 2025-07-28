@@ -113,7 +113,8 @@ WHERE category = 'Clothing'
       AND Quantity>3
 	  AND sale_date BETWEEN '2022-11-01' AND '2022-11-30';
 
---Q3. Write a SQL query to calculate the total sales(total_sale) for each category.
+## Q3. Write a SQL query to calculate the total sales(total_sale) for each category.
+'''sql
 SELECT category, 
        SUM(total_sale) as Net_sale
 FROM retail_sales
@@ -125,6 +126,7 @@ SELECT category,
 FROM retail_sales
 GROUP BY category
 ORDER BY category DESC;
+'''
 
 --Q4. Write a SQL query to find the average age of customers who purchased items from the 'Beauty' category.
 SELECT AVG(age) as avg_age
@@ -192,6 +194,7 @@ GROUP BY 2
 ORDER BY 1;
 
 ## Q12. What is the total revenue generated in the Morning, Afternoon, and Evening?(Morning <=12,Afternoon Between 12 & 17,Evening >17)
+'''sql
 SELECT 
   CASE 
     WHEN EXTRACT(HOUR FROM sale_time) < 12 THEN 'Morning'
@@ -202,6 +205,7 @@ SELECT
 FROM retail_sales
 GROUP BY time_shift
 ORDER BY 2;
+'''
 
 --Q13. Tag each transaction as “Profitable”, “Breakeven”, or “Loss” based on the difference between total_sale and cogs.
 SELECT 
