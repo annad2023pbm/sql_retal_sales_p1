@@ -1,5 +1,5 @@
 # sql_retal_sales_p1
-*SQL Retail Sales Analysis 
+# SQL Retail Sales Analysis 
 CREATE DATABASE sql_project_p1;
 
 create TABLE retail_sales
@@ -82,7 +82,7 @@ FROM retail_sales;
 SELECT COUNT(customer_id) as total_customer
 FROM retail_sales;
 
-## Q.Find the distinct categories.
+# Q.Find the distinct categories.
 SELECT Distinct (category) as total_category
 FROM retail_sales;
 
@@ -193,7 +193,7 @@ FROM retail_sales
 GROUP BY 2
 ORDER BY 1;
 
-##Q12. What is the total revenue generated in the Morning, Afternoon, and Evening?(Morning <=12,Afternoon Between 12 & 17,Evening >17)
+# Q12. What is the total revenue generated in the Morning, Afternoon, and Evening?(Morning <=12,Afternoon Between 12 & 17,Evening >17)
 '''
 SELECT 
   CASE 
